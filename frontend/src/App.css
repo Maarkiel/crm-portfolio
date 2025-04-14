@@ -25,7 +25,7 @@ body {
 
   /* 🔘 Przycisk */
   .btn-modern {
-    @apply bg-[#e5da46] text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-[#779590];
+    @apply bg-[#e5da46] text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-[#d65adf];
   }
 
   /* 🧾 Input i textarea */
