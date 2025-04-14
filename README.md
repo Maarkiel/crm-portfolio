@@ -34,3 +34,31 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 python init_db.py
 python app.py
+
+### Struktura
+
+crm-portfolio/
+├── backend/
+│   ├── app.py              # Główny plik backendu (Flask)
+│   ├── init_db.py          # Skrypt inicjalizujący bazę danych
+│   ├── database            # Plik bazy danych (SQLite)
+│   └── requirements.txt    # Zależności Pythona
+
+├── frontend/
+│   ├── public/             # Pliki statyczne (favicon, itp.)
+│   ├── src/
+│   │   ├── App.jsx         # Komponent główny Reacta
+│   │   ├── App.css         # Style
+│   │   ├── index.css       # Główne style globalne
+│   │   ├── main.jsx        # Punkt wejścia do aplikacji
+│   │   ├── vite-env.d.ts   # Typy Vite (TS)
+│   │   └── assets/         # Folder na obrazki / zasoby
+│   ├── .env                # Zmienne środowiskowe
+│   ├── index.html          # Główny HTML ładowany przez Vite
+│   ├── package.json        # Zależności NPM
+│   ├── vite.config.ts      # Konfiguracja Vite
+│   └── tailwind.config.js  # TailwindCSS config
+
+├── README.md               # Dokumentacja
+├── .gitignore              # Pliki ignorowane przez Git
+└── venv/                   # (lokalne środowisko Python)
