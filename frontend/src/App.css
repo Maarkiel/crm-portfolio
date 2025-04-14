@@ -1,42 +1,68 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Globalne ustawienia */
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Nagłówek główny */
+.heading-modern {
+  font-size: 2.25rem; /* text-3xl */
+  font-weight: 700;   /* font-bold */
+  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Podtytuł sekcji */
+.subheading-modern {
+  font-size: 1.5rem;  /* text-xl */
+  font-weight: 600;   /* font-semibold */
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Karta sekcji */
+.card-modern {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  padding: 2em;
+/* Styl przycisku */
+.btn-modern {
+  background-color: #4f46e5; /* indigo-600 */
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.btn-modern:hover {
+  background-color: #4338ca; /* indigo-700 */
 }
 
-.read-the-docs {
-  color: #888;
+/* Styl inputów i textarea */
+.input-modern {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.5rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.input-modern:focus {
+  border-color: #4f46e5; /* indigo-600 */
+}
+
+/* Styl listy klientów */
+.list-item {
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.list-item:hover {
+  background-color: #f3f4f6;
 }

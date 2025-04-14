@@ -67,5 +67,20 @@ def delete_interaction(interaction_id):
     conn.close()
     return jsonify({'message': 'Interaction deleted successfully'}), 200
 
+# Endpoint: edycja klienta
+@app.route('/clients/<int:client_id>', methods=['PUT'])
+def update_client(client_id):
+    data = request.json
+    conn = get_db_connection()
+    conn.execute('''
+        UPDATE clients 
+        SET name = ?, email = ?, phone = ?, status = ? 
+        WHERE id = ?
+    ''', (data['name'], data['email'], data['phone'], data['status'], client_id))
+    conn.commit()
+    conn.close()
+    return jsonify({'message': 'Client updated successfully'}), 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
