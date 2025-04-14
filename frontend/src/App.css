@@ -1,68 +1,40 @@
-/* Globalne ustawienia */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: 'Inter', sans-serif;
+  @apply text-white bg-zinc-900;
 }
 
-/* Nagłówek główny */
-.heading-modern {
-  font-size: 2.25rem; /* text-3xl */
-  font-weight: 700;   /* font-bold */
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
+@layer components {
+  /* 🔠 Nagłówek główny */
+  .heading-modern {
+    @apply text-3xl font-bold mb-2 text-[#306e09];
+  }
 
-/* Podtytuł sekcji */
-.subheading-modern {
-  font-size: 1.5rem;  /* text-xl */
-  font-weight: 600;   /* font-semibold */
-  margin-bottom: 1rem;
-  color: #fff;
-}
+  /* 📝 Podtytuł sekcji */
+  .subheading-modern {
+    @apply text-xl font-semibold mb-4 text-white;
+  }
 
-/* Karta sekcji */
-.card-modern {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+  /* 🧱 Karta sekcji */
+  .card-modern {
+    @apply bg-[#474545] p-6 rounded-2xl shadow-md;
+  }
 
-/* Styl przycisku */
-.btn-modern {
-  background-color: #4f46e5; /* indigo-600 */
-  color: white;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease;
-}
-.btn-modern:hover {
-  background-color: #4338ca; /* indigo-700 */
-}
+  /* 🔘 Przycisk */
+  .btn-modern {
+    @apply bg-[#e5da46] text-white font-semibold py-2 px-4 rounded-md transition duration-200 hover:bg-[#779590];
+  }
 
-/* Styl inputów i textarea */
-.input-modern {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #d1d5db; /* gray-300 */
-  border-radius: 0.5rem;
-  width: 100%;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.input-modern:focus {
-  border-color: #4f46e5; /* indigo-600 */
-}
+  /* 🧾 Input i textarea */
+  .input-modern {
+    @apply px-3 py-2 border border-gray-300 rounded-md w-full outline-none transition focus:border-indigo-600;
+  }
 
-/* Styl listy klientów */
-.list-item {
-  padding: 0.75rem 1rem;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-.list-item:hover {
-  background-color: #f3f4f6;
+  /* 📋 Element listy */
+  .list-item {
+    @apply px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl mb-2 cursor-pointer transition hover:bg-gray-100 text-black;
+  }
 }

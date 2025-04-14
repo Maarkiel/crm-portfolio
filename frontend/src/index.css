@@ -6,32 +6,32 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
-  color: #111827;
+  background-color: #1e1e1d; 
+  color: #f1f5f9; 
 }
 
 @layer components {
   .card-modern {
-    @apply bg-white/90 backdrop-blur-md shadow-xl rounded-xl p-6 mb-6;
+    @apply bg-white/10 backdrop-blur-xl shadow-2xl rounded-2xl p-6 mb-6 border border-white/10;
   }
 
   .input-modern {
-    @apply border border-gray-300 rounded px-3 py-2 w-full placeholder-gray-400 bg-white/90 focus:outline-none focus:ring-2 focus:ring-blue-500 transition;
+    @apply border border-white/20 rounded px-3 py-2 w-full placeholder-gray-300 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-green-400 transition;
   }
 
   .btn-modern {
-    @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition;
+    @apply bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition shadow-lg;
   }
 
   .heading-modern {
-    @apply text-4xl font-bold mb-2 text-white drop-shadow-lg;
+    @apply text-4xl font-extrabold mb-2 text-white drop-shadow-2xl tracking-wide;
   }
 
   .subheading-modern {
-    @apply text-2xl font-semibold mb-4 text-white drop-shadow;
+    @apply text-2xl font-semibold mb-4 text-white drop-shadow-lg;
   }
 
   .list-item {
-    @apply border-b border-gray-200 py-3 px-2 hover:bg-gray-100 transition cursor-pointer rounded-md bg-white/70;
+    @apply border border-white/10 py-3 px-4 bg-white/10 rounded-lg hover:bg-white/20 transition cursor-pointer text-white;
   }
 }
